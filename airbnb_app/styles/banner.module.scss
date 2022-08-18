@@ -1,0 +1,76 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.containerIntro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.containerB{
+  background-color: #F7F7F7;
+  width: 93%;
+  border-radius: 12px;
+  margin: auto;
+  margin-bottom: 5%;
+}
+.header{
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: bold;
+  color: #222222;
+  width: 40%;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.section{
+  background-image: url("https://a0.muscache.com/im/pictures/93ef1829-62d1-4349-8b4a-b02ebc650a25.jpg?im_w=2560&im_q=highq");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  background-position: 50% 50%;
+  width: 93%;
+  margin: 5% 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.para{
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  width: 60%;
+  text-align: center;
+}
+.btn{
+  background: white;
+  border: none;
+  padding: 1% 2%;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.paraB{
+  font-size: 2em;
+  width: 70%;
+  text-align: center;
+}
+.btnB{
+  background: white;
+  border: 1px solid;
+  padding: 1% 2%;
+  margin-top: 3%;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.per{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}

@@ -1,0 +1,18 @@
+$mainColor:#ff385c;
+//$boxShadow: #ddd 0px 10px 15px, #ddd 0px 6px 6px;
+$boxShadow:0 2px 4px rgba(0,0,0,0.18);
+$boxShadow2:#eee 0px 4px 12px;
+$mainFont:'Poppins', sans-serif;
+@mixin boxShadoeStyle {
+    border: 1px solid #eee;
+    border-radius: 30px;
+    background-color: #FFF;
+    box-shadow: $boxShadow;
+}
+.bosStyle{
+    padding: 7px 15px;
+    border-radius: 10px;
+    box-shadow: #eee 0px 4px 12px;
+    border:1px solid #eee;
+  }
+  

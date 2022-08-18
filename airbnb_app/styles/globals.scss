@@ -1,0 +1,52 @@
+@import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $mainFont;
+}
+a {
+  color: inherit;
+  color: #000 !important;
+  // text-decoration: none;
+}
+
+* {
+  // font-size: 14px;
+  // font-weight: 300;
+  box-sizing: border-box;
+}
+
+p{
+  padding: 0 !important;
+  margin: 0 !important;
+// font-size: 14px;
+}
+// h1,h2,h3,h4,h5,h6{
+//   font-size: 14px;
+// }
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.alice-carousel__next-btn [data-area]::after,
+.alice-carousel__prev-btn [data-area]::after {
+  font-size: 20px;
+  background: #ddd;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-align: center;
+  align-self: center;
+}
+.alice-carousel__dots{
+ padding: 0;
+ margin: 3px auto !important;
+}

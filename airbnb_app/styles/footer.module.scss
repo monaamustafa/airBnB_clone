@@ -1,0 +1,30 @@
+/* Footer */
+#pFooter{
+  margin-top: 3%;
+  background-color:  #f7f7f7;
+  width: 100%;
+  color: #222222;
+  #header{
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .fUl{
+    list-style: none;
+    color: #222222;
+    li{
+      color: #222222;
+      margin: 1% 0;
+      padding: 2% 0;
+    }
+  }
+  p{  
+    margin-top: 14px;
+  }
+}
+
+#icons{
+   svg{
+  margin-right: 8%; 
+  color: #222222;
+   }
+}

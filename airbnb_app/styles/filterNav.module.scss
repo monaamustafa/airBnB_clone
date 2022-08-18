@@ -1,0 +1,29 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "variables.scss";
+.filterBox {
+  padding-top: 10px;
+  .filterIconsBar {
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    img{
+      width: 10px;
+      cursor: pointer;
+    }
+    p {
+      font-size: 11px;
+      text-align: center;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+.filterNavTp{
+  margin-top: 10px;
+  display: inline-block;
+  margin:auto;
+  align-items: center;
+  p{
+    margin-right: 10px !important;
+  }
+}

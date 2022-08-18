@@ -1,0 +1,131 @@
+.Mycontainer{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  text-align: center;
+}
+.container{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.sContainer{
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.bg{
+  background: 
+  linear-gradient(to right,#E61E4D 0%,#E31C5F 50%,#D70466 100%),
+  radial-gradient(circle at center,#FF385C 0%,#E61E4D 27.5%,#E31C5F 40%,#D70466 57.5%,#BD1E59 75%,#BD1E59 100%),
+  linear-gradient(to right,#BD1E59 0%,#92174D 50%,#861453 100%),
+  radial-gradient(circle at center,#D70466 0%,#BD1E59 30%,#92174D 55%,#861453 72.5%,#6C0D63 90%,#6C0D63 100%),
+  linear-gradient(to right,#59086E 0%,#460479 50%,#440589 100%),
+  radial-gradient(circle at center,#6C0D63 0%,#59086E 30%,#460479 55%,#440589 72.5%,#3B07BB 90%,#3B07BB 100%); 
+}
+.para{
+  color: white;
+  font-size: 3em;
+  width: 80%;
+  font-weight: 500;
+  text-align: left;
+}
+.sBtn{
+  width: 60%;
+  margin: 1%;
+  padding: 4.5%;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-align: left;
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  outline: none;
+}
+.sBtn:hover{
+  border-color: transparent ;
+  box-shadow: rgb(34 34 34) 0px 0px 0px 2px;
+}
+.sBtn:focus{
+//selected
+  border-color: transparent ;
+  box-shadow: rgb(34 34 34) 0px 0px 0px 2px;
+  background-color: rgb(247, 247, 247) ;
+}
+.Bcontainer{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.backBtn{
+  border: none;
+  background-color: white;
+  margin: 3%;
+  font-weight: 500;
+  font-size: 1.20em;
+  text-decoration: underline;
+}
+.nextBtn{
+  border: none;
+  background-color: #222222;
+  color: white;
+  border-radius: 8px;
+  padding: 1% 2%;
+  margin: 3%;
+  font-weight: 500;
+  font-size: 1.20em;
+}
+.nextBtn:hover{
+  background-color: black;
+}
+.cBtn{
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+.gContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.formInput{
+  width: 50% !important;
+  padding: 3.5% !important;
+  margin: 1% !important;
+  font-size: 1.25em !important;
+  text-align: left !important;
+  border-radius: 12px !important;
+  outline: none !important;
+  color:rgb(113, 113, 113);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(176, 176, 176) ;
+}
+.gLable{
+ font-size: 2em;
+ font-weight: 500;
+ width: 10%;
+
+}

@@ -1,0 +1,45 @@
+.homeNavs{
+    background-color: #fff;
+    // z-index: 0;
+}
+.homeContent{
+    padding-top: 220px;
+}
+.pname{
+  color: #222222 !important;
+  font-size: 2em !important;
+}
+.pnamee{
+    color: #717171 !important;   
+}
+.container{
+    margin: 0 5%;
+}
+
+.homeCardBox{
+    width: 24%;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 30px;
+    img{
+        border-radius: 15px;
+    }
+    .CardBoxHeartIcon{
+        button{
+background-color: transparent;
+border: none;
+        }
+        position: absolute;
+        top: 10px;
+        font-size: 22px;
+        color: #EEE;
+        z-index: 1000;
+        right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .homeCardBox{
+        margin: 10px auto;
+        width: 49%;
+    }
+}

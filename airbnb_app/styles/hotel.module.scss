@@ -1,0 +1,118 @@
+@import "./_variables.scss";
+.hotelDetails {
+  padding-top: 50px;
+  .mainHotelInfo {
+    p {
+      font-weight: 500;
+    }
+    a {
+      text-decoration: underline;
+    }
+    .mainHotelInfoContent {
+      margin-bottom: 20px;
+    }
+  }
+}
+.imagesSection {
+  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  justify-content: center;
+  .mainImage {
+    width: 50%;
+  }
+  .spiltImagesSection {
+    width: 50%;
+    height: auto;
+    .spiltImags {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+.infoSection {
+  width: 55%;
+  padding-top: 20px;
+  section {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hostInfo {
+    p {
+      letter-spacing: 1px;
+      font-size: 17px;
+      font-weight: 300;
+    }
+  }
+  .furryFriend {
+    align-self: center;
+    align-items: center;
+    padding-top: 20px;
+    div {
+      margin-left: 20px;
+    }
+  }
+  .airCover {
+    h3 {
+      font-size: 29px;
+      font-weight: 600;
+    }
+    span {
+      color: $mainColor;
+    }
+  }
+}
+
+///////////////////////////////////// Booking component   ///////////////////////////////////
+/////////////////////
+////////////
+///////
+///
+//
+.formContainer{
+  width: 37%;
+// padding: 20px;
+}
+.bookinSection {
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  box-shadow: $boxShadow;
+
+  .formSection {
+     form{
+      div{
+        div{
+          width: 50%;
+        }
+      }
+     }
+    button {
+      display: inline-block;
+      margin-top: 20px;
+      margin-left: 20%;
+      --ihf-tp-q: #ff385c;
+      border: 0;
+      padding: 10px 60px;
+      background-image: radial-gradient(
+        circle at center,
+        var(--ihf-tp-q) 0%,
+        #e61e4d 27.5%,
+        #e31c5f 40%,
+        #d70466 57.5%,
+        #bd1e59 75%,
+        #bd1e59 100%
+      );
+    }
+  }
+  a{text-decoration: underline;}
+  input[type="date"] {
+    padding: 15px;
+  }
+}
