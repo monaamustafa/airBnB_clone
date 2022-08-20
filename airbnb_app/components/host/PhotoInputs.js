@@ -10,15 +10,27 @@ function PhotoInputs(props) {
   const ImageSubmit =()=>{
     dispatch(setHostImage(imag))
     }
-    
+    //  const submitinfo=(event)=>{
+      // var url = "http://localhost:8080/images";
+  //  var request = new XMLHttpRequest();
+  //  request.open('POST', url, true);
+  //  request.onload = function() { // request successful
+      // we can use server response to our request now
+      // console.log(request.responseText);
+  //  };
+
+  //  request.send(new FormData(event.target)); // create FormData from form that triggered event
+  //  event.preventDefault();
+
+    // }
   return (
     <div className={style.container}>
       <div className={style.sContainer}>
         <form
           className={style.sContainer}
-          action="http://localhost:8080/images"
-          enctype="multipart/form-data"
-          method="POST"
+          // action="http://localhost:8080/images"
+           enctype="multipart/form-data"
+          // method="POST"
         >
           <label
             className={style.gLable}
@@ -35,6 +47,8 @@ function PhotoInputs(props) {
             accept="image/*"
             multiple
           />
+          <input type="submit"/>
+          {/* <button onClick={(e)=>submitinfo(e)}></button> */}
         </form>
       </div>
       <div className={style.Bcontainer}>

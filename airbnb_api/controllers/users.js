@@ -28,6 +28,7 @@ exports.updateUser = async (req, res, next) => {
       user.email = allFields.email || user.email;
       user.country = allFields.country || user.country;
       user.phone = allFields.phone || user.phone;
+      user.isAdmin = allFields.isAdmin || user.isAdmin;
 
       return user.save();
     })
@@ -104,7 +105,9 @@ exports.deleteUser = async (req, res, next) => {
 exports.getUser = async (req, res, next) => {
   const { id } = req.params;
   // console.log(req.user.userId);
-  await User.findById(id)
+  await User.findById(id).populate("wishlist")
+  .populate("reservations")
+  .populate("hotels")
     .then((user) => {
       // if user does not exist, return error
       if (!user) {

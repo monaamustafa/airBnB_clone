@@ -2,11 +2,11 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useSelector } from "react-redux";
 const initialState = {
-  loading: false,
+  isLoading: false,
   hotel: {},
   hotels: [],
   hotelDetails:{},
-  error: "",
+  isError: "",
 };
 
 export const fetchHotels = createAsyncThunk("hotel/fetchHotels", async () => {
@@ -38,7 +38,27 @@ export const insertHotel = createAsyncThunk(
     }
   }
 );
-
+// export const insertHotel = createAsyncThunk(
+//   `hotel/insertHotel`,
+//   async (hotel, thunkAPI) => {
+//     const { rejectWithValue } = thunkAPI;
+//     try {
+//       const response = await fetch(`http://localhost:8080/api/hotels/`, {
+//         method: 'POST',
+//         body: JSON.stringify(hotel),
+//         headers: {
+//           // 'Content-Type': 'multipart/form-data',
+//           'Content-Type': 'application/json',
+//           token: localStorage.getItem('token'),
+//         },
+//       });
+//       const data = await response.json();
+//       return data;
+//     } catch (error) {
+//       return rejectWithValue(error);
+//     }
+//   }
+// );
 export const getRoom = createAsyncThunk(`room/getRoom`,async (id, thunkAPI) => {
   return axios
     .get(`http://localhost:8080/api/hotels/find/${id}`)
@@ -81,31 +101,31 @@ const hotelSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchHotels.pending, (state) => {
-      state.loading = true;
+      state.isLoading = true;
     });
     builder.addCase(fetchHotels.fulfilled, (state, action) => {
-      state.loading = false;
+      state.isLoading = false;
       state.hotels = action.payload.hotels;
       state.error;
     });
     builder.addCase(fetchHotels.rejected, (state, action) => {
-      state.loading = false;
+      state.isLoading = false;
       state.hotels = [];
-      state.error = action.error.message;
+      state.isError = action.error.message;
     });
     builder.addCase(getRoom.pending, (state) => {
-      state.loading = true;
+      state.isLoading = true;
     });
     builder.addCase(getRoom.fulfilled, (state, action) => {
-      state.loading = false;
+      state.isLoading = false;
       state.hotelDetails = action.payload.hotel;
-      state.error;
+      state.isError;
     });
     builder.addCase(getRoom.rejected, (state, action) => {
-      state.loading = false;
+      state.isLoading = false;
       state.message = action.payload.message;
       // state.hotels = [];
-      state.error = action.error.message;
+      state.isError = action.error.message;
     });
     builder.addCase(insertHotel.pending, (state, action) => {
       state.isLoading = true;
@@ -115,7 +135,7 @@ const hotelSlice = createSlice({
     builder.addCase(insertHotel.fulfilled,(state, action) => {
       state.isLoading = false;
       state.isSuccess = true;
-      // state.hotels.push(action.payload);
+      state.hotels.push(action.payload);
       console.log(action.payload);
     });
     builder.addCase(insertHotel.rejected, (state, action) => {

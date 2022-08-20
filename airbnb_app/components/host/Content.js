@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import style from '../../styles/content.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateUser } from '../../app/slices/auth/authSlice';
+import React from "react";
+import Link from "next/link";
+import style from "../../styles/content.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { updateUser } from "../../app/slices/auth/authSlice";
 // import {updateUser} from '../../app/slices/auth/authSlice';
 
 function Content(props) {
@@ -10,15 +10,13 @@ function Content(props) {
   const { user } = useSelector((state) => state.auth);
   console.log(user);
   const tryHosting = () => {
-    const testu={
-      id:user._id,
-      isAdmin:"host"
-  
-    }  
-    console.log(testu)
-    if (props.checkTry == 'tryNow') {
-    dispatch(updateUser(testu));
-
+    const testu = {
+      id: user._id,
+      isAdmin: "host",
+    };
+    console.log(testu);
+    if (props.checkTry == "tryNow") {
+      dispatch(updateUser(testu));
     }
   };
   return (

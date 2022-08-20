@@ -23,10 +23,6 @@ function PlaceInfo(props) {
     dispatch(settitle(title));
     console.log(hotel);
   };
-  const submitAll = () => {
-    console.log(hotel);
-    dispatch(insertHotel(hotel));
-  };
   return (
     <div className={style.container}>
       <div className={style.sContainer}>
@@ -65,7 +61,7 @@ function PlaceInfo(props) {
         <Link href={`${props.nextHref}`}>
           <button className={style.backBtn}>Back</button>
         </Link>
-        <button
+        <Link href={"/user/newhosting"} ><button
           className={style.nextBtn}
           onClick={() => {
             InfoSubmit();
@@ -73,11 +69,9 @@ function PlaceInfo(props) {
         >
           Next
         </button>
-        <Link href={"/user/dashboard"}>
-          <button className={style.nextBtn} onClick={submitAll}>
-            submit
-          </button>
+       
         </Link>
+         
       </div>
     </div>
   );

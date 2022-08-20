@@ -66,6 +66,28 @@ export const updateUser = createAsyncThunk(
   }
 );
 
+export const getUserId = createAsyncThunk(
+  'user/getUserId',
+  async (user, thunkAPI) => {
+    try {
+      const responce = await fetch(
+        `http://localhost:8080/api/users/${user.id}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            token: localStorage.getItem('token'),
+          }
+        }
+      );
+      // localStorage.setItem('user', JSON.stringify(responce.data.user))  
+      // await console.log(responce.josn())
+      return await responce.json();
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
 export const logout = createAsyncThunk('auth/logout', async () => {
   await authService.logout()
 })
@@ -145,6 +167,24 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload.message;
       })
+      .addCase(getUserId.pending, (state, action) => {
+        state.isLoading = true;
+        state.isError = false;
+      })
+      .addCase(getUserId.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        console.log(action.payload)
+        state.user = action.payload.user;
+        state.message = action.payload.message;
+        // localStorage.setItem('user', JSON.stringify(action.payload.user))
+
+      })
+      .addCase(getUserId.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload.message;
+      })
+      
       .addCase(logout.fulfilled, (state) => {
         state.user = null
         state.isSuccess = false
